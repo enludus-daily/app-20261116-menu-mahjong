@@ -2,7 +2,9 @@ import SwiftUI
 
 @main
 struct MenuMahjongApp: App {
-    @State private var model = Launch.makeModel()
+    /// アプリ全体で 1 つだけ。App の init は何度も呼ばれることがあるので、ここで作り直さない
+    /// （作り直すと、UI テストの起動で記録を消す処理も繰り返し、画面とボタンが別のモデルを見てしまう）
+    private let model = Launch.shared
 
     var body: some Scene {
         WindowGroup {
@@ -12,12 +14,12 @@ struct MenuMahjongApp: App {
 }
 
 struct RootView: View {
-    @State var model: AppModel
+    let model: AppModel
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         @Bindable var model = model
-        let _ = print("[MM] root body round=\(model.round == nil ? "nil" : "set") onboarded=\(model.onboarded)")
+        let _ = print("[MM] root body model=\(ObjectIdentifier(model).hashValue) round=\(model.round == nil ? "nil" : "set") onboarded=\(model.onboarded)")
         ZStack {
             if model.onboarded {
                 HomeView()
@@ -121,7 +123,11 @@ enum Launch {
         Calendar.current.date(bySettingHour: 18, minute: 30, second: 0, of: Date()) ?? Date()
     }
 
+    /// アプリでただ 1 つのモデル（最初に読まれたときに 1 回だけ作る）
+    static let shared: AppModel = makeModel()
+
     static func makeModel() -> AppModel {
+        print("[MM] makeModel")
         Lang.forcedJapanese = forcesJapanese
         if isFreshUITest {
             for key in ["progress", "onboarded", "sound", "haptics", "strong", "paywallOffered"] {
