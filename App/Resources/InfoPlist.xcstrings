@@ -7,13 +7,13 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "__APP_NAME__"
+            "value": "献立マージャン"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "__APP_NAME__"
+            "value": "Menu Mahjong"
           }
         }
       }

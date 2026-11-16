@@ -1,42 +1,1443 @@
 {
   "sourceLanguage": "ja",
   "strings": {
-    "はじめる": {
+    "%@ の捨て牌で、献立がそろう！": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start"
+            "value": "%@'s discard completes your menu!"
           }
         }
       }
     },
-    "リセット": {
+    "%@ の献立": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset"
+            "value": "%@'s menu"
           }
         }
       }
     },
-    "1 たす": {
+    "%@ の番": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add 1"
+            "value": "%@ is playing"
           }
         }
       }
     },
-    "回数 %lld": {
+    "%@ を、焼く・煮る・あえるの 3 通りで。": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Count %lld"
+            "value": "%@ three ways: seared, simmered and dressed."
+          }
+        }
+      }
+    },
+    "%@ 捨て牌 %d 枚": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %d discards"
+          }
+        }
+      }
+    },
+    "%d / 4 品": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d / 4 dishes"
+          }
+        }
+      }
+    },
+    "%d 点": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d pts"
+          }
+        }
+      }
+    },
+    "%d 翻": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d han"
+          }
+        }
+      }
+    },
+    "1 回だけお試し": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One free try"
+          }
+        }
+      }
+    },
+    "1 枚引いて 1 枚捨てる。料理になりそうな牌を残そう。相手 3 人より先にそろえたら勝ち。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Draw one, discard one. Keep tiles that cook together and beat three rival chefs to dinner."
+          }
+        }
+      }
+    },
+    "3 枚で 1 品、同じ 2 枚で主食。4 品そろえて和了り。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 tiles make a dish, a pair makes the staple. 4 dishes + 1 pair wins."
+          }
+        }
+      }
+    },
+    "4 品と、同じ 2 枚の主食で和了り": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 dishes + a pair (your staple) wins"
+          }
+        }
+      }
+    },
+    "Pro で、和了った献立が 1 週間の献立表になります。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With Pro, your wins become a weekly dinner plan."
+          }
+        }
+      }
+    },
+    "Pro でできること": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What Pro adds"
+          }
+        }
+      }
+    },
+    "Pro にする（%@・買い切り）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Pro (%@, one-time)"
+          }
+        }
+      }
+    },
+    "Pro を使っています": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro is active"
+          }
+        }
+      }
+    },
+    "Pro を使っています。ありがとうございます！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have Pro. Thank you!"
+          }
+        }
+      }
+    },
+    "あと %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "needs %@"
+          }
+        }
+      }
+    },
+    "あと %@ で「%@」": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One %@ away from %@"
+          }
+        }
+      }
+    },
+    "あなたの番：1 枚捨てる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your turn: discard one"
+          }
+        }
+      }
+    },
+    "ありがとうございます！ Pro が使えます。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thank you! Pro is unlocked."
+          }
+        }
+      }
+    },
+    "いまは購入できません。通信できる場所で開き直してください。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchases aren't available right now. Try again when you're online."
+          }
+        }
+      }
+    },
+    "いま家にある食材を 10 種まで選ぶと、冷蔵庫の一局ではその牌が多く出て、買い物メモから外れます。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick up to 10 ingredients you have. In Fridge mode they show up more often and drop off your shopping list."
+          }
+        }
+      }
+    },
+    "お弁当": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bento"
+          }
+        }
+      }
+    },
+    "お弁当（から揚げ・肉巻きおにぎり…）と世界の料理（パエリア・ビビンバ・トムヤムクン…）が役に加わる。和了りやすく、献立の幅も広がる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bento (karaage, pork-wrapped onigiri…) and world dishes (paella, bibimbap, tom yum…) join the rules. Easier wins, wider menus."
+          }
+        }
+      }
+    },
+    "この %d 種で一局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play with these %d"
+          }
+        }
+      }
+    },
+    "ざる麺": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chilled noodles"
+          }
+        }
+      }
+    },
+    "すべて": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
+          }
+        }
+      }
+    },
+    "そろえた役が、今夜の献立になった": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My winning hand became tonight's dinner"
+          }
+        }
+      }
+    },
+    "そろえた役が、今夜の献立になる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your winning hand is tonight's dinner"
+          }
+        }
+      }
+    },
+    "そろった品がここに並びます。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completed dishes appear here."
+          }
+        }
+      }
+    },
+    "そろった品はありませんでした。次は、料理になりそうな牌を残してみよう。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No dishes this time. Next round, keep tiles that cook together."
+          }
+        }
+      }
+    },
+    "そろった！ ツモで和了る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Complete! Call Tsumo"
+          }
+        }
+      }
+    },
+    "だれが打っても同じ配牌。1 日 1 局で、連続日数がのびる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Same deal for everyone. One hand a day keeps your streak going."
+          }
+        }
+      }
+    },
+    "つぎへ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        }
+      }
+    },
+    "づくし・主食に": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good for pairs"
+          }
+        }
+      }
+    },
+    "ほかに %d 件の献立があります。Pro ですべて見られます。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d older menus saved. Pro shows them all."
+          }
+        }
+      }
+    },
+    "まだテンパイではありません。料理になりそうな牌を残そう。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not ready yet. Keep tiles that cook together."
+          }
+        }
+      }
+    },
+    "まだ作っていない料理": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not cooked yet"
+          }
+        }
+      }
+    },
+    "まだ献立はありません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No menu yet."
+          }
+        }
+      }
+    },
+    "まだ献立はありません。和了ると、ここに今夜の献立が残ります。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No menus yet. Each win saves tonight's menu here."
+          }
+        }
+      }
+    },
+    "もう一局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play again"
+          }
+        }
+      }
+    },
+    "やめてホームへ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leave the table"
+          }
+        }
+      }
+    },
+    "ツモ・献立完成": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tsumo — Dinner!"
+          }
+        }
+      }
+    },
+    "ツモ！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tsumo!"
+          }
+        }
+      }
+    },
+    "ツモ！ 和了る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tsumo! Win"
+          }
+        }
+      }
+    },
+    "テンパイ！ 待ち：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready! Waiting on: %@"
+          }
+        }
+      }
+    },
+    "ヒント": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hint"
+          }
+        }
+      }
+    },
+    "ホームへ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home"
+          }
+        }
+      }
+    },
+    "ロン・献立完成": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ron — Dinner!"
+          }
+        }
+      }
+    },
+    "ロン！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ron!"
+          }
+        }
+      }
+    },
+    "一度買えば、ずっと使えます（買い切り・家族共有）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pay once, keep it forever (one-time, Family Sharing)"
+          }
+        }
+      }
+    },
+    "三倍満": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sanbaiman"
+          }
+        }
+      }
+    },
+    "世界の料理": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "World"
+          }
+        }
+      }
+    },
+    "中華": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chinese"
+          }
+        }
+      }
+    },
+    "中身を選んで": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick what you have"
+          }
+        }
+      }
+    },
+    "今回は先を越されました。手元の食材で作れる品はこちら。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Someone beat you to it. Here's what your hand can still cook."
+          }
+        }
+      }
+    },
+    "今夜の御献立": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tonight's Menu"
+          }
+        }
+      }
+    },
+    "今夜の献立": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tonight's menu"
+          }
+        }
+      }
+    },
+    "今日の一局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's Hand"
+          }
+        }
+      }
+    },
+    "今日の一局 %d 日連続": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily streak: %d days"
+          }
+        }
+      }
+    },
+    "今日の一局で和了ると、そろえた料理と買い物メモがここに残ります。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Win today's hand and your dishes and shopping list land here."
+          }
+        }
+      }
+    },
+    "今日の一局を打つ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play today's hand"
+          }
+        }
+      }
+    },
+    "今日は和了り %d 点。また明日": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Won %d pts today. See you tomorrow"
+          }
+        }
+      }
+    },
+    "今日は打ちました。また明日": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Played today. See you tomorrow"
+          }
+        }
+      }
+    },
+    "今週の献立表": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This week's plan"
+          }
+        }
+      }
+    },
+    "何局でも": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited"
+          }
+        }
+      }
+    },
+    "作った料理は図鑑に集まる。記録はこの端末の中だけに保存し、外には送りません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dishes fill your collection. Everything stays on this device — nothing is sent anywhere."
+          }
+        }
+      }
+    },
+    "作りかけの献立": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu in progress"
+          }
+        }
+      }
+    },
+    "使い方": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Help"
+          }
+        }
+      }
+    },
+    "使い方をもう一度見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show the intro again"
+          }
+        }
+      }
+    },
+    "倍満": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baiman"
+          }
+        }
+      }
+    },
+    "共有": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        }
+      }
+    },
+    "冷蔵庫": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fridge"
+          }
+        }
+      }
+    },
+    "冷蔵庫の一局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fridge mode"
+          }
+        }
+      }
+    },
+    "冷蔵庫の中身": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Fridge"
+          }
+        }
+      }
+    },
+    "冷蔵庫の中身を選ぶ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up your fridge"
+          }
+        }
+      }
+    },
+    "効果音": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sound effects"
+          }
+        }
+      }
+    },
+    "卓": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Table"
+          }
+        }
+      }
+    },
+    "卓につく": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take a seat"
+          }
+        }
+      }
+    },
+    "和了られた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beaten"
+          }
+        }
+      }
+    },
+    "和了られた…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beaten to it…"
+          }
+        }
+      }
+    },
+    "和了り %d 回 / %d 局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d wins / %d hands"
+          }
+        }
+      }
+    },
+    "和了ると、今夜の献立と買い物メモが残る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A win leaves tonight's menu and a shopping list"
+          }
+        }
+      }
+    },
+    "和食": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Japanese"
+          }
+        }
+      }
+    },
+    "図鑑": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dishes"
+          }
+        }
+      }
+    },
+    "家にある食材を選ぶと、その牌が多く出る。和了った献立は「買うもの」だけが買い物メモに残る。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick what you have; those tiles show up more. Your shopping list only shows what you need to buy."
+          }
+        }
+      }
+    },
+    "山": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wall"
+          }
+        }
+      }
+    },
+    "役満": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakuman"
+          }
+        }
+      }
+    },
+    "御献立（仮）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tonight's menu (draft)"
+          }
+        }
+      }
+    },
+    "手元で作れる品": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What your hand can cook"
+          }
+        }
+      }
+    },
+    "承認を待っています。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for approval."
+          }
+        }
+      }
+    },
+    "振動": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haptics"
+          }
+        }
+      }
+    },
+    "捨てる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discard"
+          }
+        }
+      }
+    },
+    "料理の図鑑": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dish Collection"
+          }
+        }
+      }
+    },
+    "最後の捨て牌": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last discard"
+          }
+        }
+      }
+    },
+    "核の遊び（今日の一局・自由に一局・74 品の役・図鑑・買い物メモ）は無料のままです。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The core game — daily hand, free play, 74 dishes, collection and shopping lists — stays free."
+          }
+        }
+      }
+    },
+    "洋食": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Western"
+          }
+        }
+      }
+    },
+    "流局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Draw"
+          }
+        }
+      }
+    },
+    "満貫": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mangan"
+          }
+        }
+      }
+    },
+    "無料では最新 5 件。Pro では全部の献立と、月〜日の献立表が見られる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free keeps the latest 5. Pro keeps every menu and lays out your week, Mon–Sun."
+          }
+        }
+      }
+    },
+    "焼きたてパン": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fresh bread"
+          }
+        }
+      }
+    },
+    "牌がなくなりました。手元の食材で作れる品はこちら。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The wall ran out. Here's what your hand can still cook."
+          }
+        }
+      }
+    },
+    "牌を押して選び、もう一度押すと捨てます": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap a tile to pick it, tap again to discard"
+          }
+        }
+      }
+    },
+    "献立を共有": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share your menu"
+          }
+        }
+      }
+    },
+    "献立マージャン": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu Mahjong"
+          }
+        }
+      }
+    },
+    "献立マージャン Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu Mahjong Pro"
+          }
+        }
+      }
+    },
+    "献立帳": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu Book"
+          }
+        }
+      }
+    },
+    "献立帳をすべて・1 週間の献立表": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full menu book + weekly plan"
+          }
+        }
+      }
+    },
+    "生姜焼き": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ginger pork"
+          }
+        }
+      }
+    },
+    "画像で送る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share image"
+          }
+        }
+      }
+    },
+    "白ごはん": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steamed rice"
+          }
+        }
+      }
+    },
+    "相手の番です": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rivals are playing"
+          }
+        }
+      }
+    },
+    "相手を強くする": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stronger rivals"
+          }
+        }
+      }
+    },
+    "自由に一局": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free play"
+          }
+        }
+      }
+    },
+    "見送る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pass"
+          }
+        }
+      }
+    },
+    "記録（献立・図鑑・連続日数）はこの端末の中だけに保存します。通信・ログイン・広告・解析はありません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your menus, collection and streak stay on this device. No network, login, ads or analytics."
+          }
+        }
+      }
+    },
+    "設定": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "読み込み中…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading…"
+          }
+        }
+      }
+    },
+    "豚・生姜・しょうゆで「豚の生姜焼き」。料理の役は 70 品以上。同じ食材 3 枚は「づくし」。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pork + ginger + soy = Ginger Pork. Over 70 dishes to find. Three of a kind is an \\\"All-in\\\" plate."
+          }
+        }
+      }
+    },
+    "買い物メモ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shopping list"
+          }
+        }
+      }
+    },
+    "買い物メモ：豚肉・鶏肉・ひき肉・卵・玉ねぎ…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shopping: pork, chicken, mince, eggs, onion…"
+          }
+        }
+      }
+    },
+    "購入できませんでした。時間をおいて試してください。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchase failed. Please try again later."
+          }
+        }
+      }
+    },
+    "購入を復元": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore purchases"
+          }
+        }
+      }
+    },
+    "跳満": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haneman"
+          }
+        }
+      }
+    },
+    "追加の役 32 品": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "32 more dishes"
+          }
+        }
+      }
+    },
+    "連続": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "streak"
+          }
+        }
+      }
+    },
+    "閉じる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "集めた料理 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collected %d / %d"
+          }
+        }
+      }
+    },
+    "食材 %d 種": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d ingredients"
+          }
+        }
+      }
+    },
+    "食材の牌を 3 枚そろえると、1 品の料理になる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Three ingredient tiles make one dish"
           }
         }
       }

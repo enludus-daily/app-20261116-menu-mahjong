@@ -7,14 +7,33 @@ import XCTest
 
 /// その日のアプリの主な流れ。
 enum MainFlow {
-    /// 起動引数（見本のデータで開くなど。保存されたデータを壊さないもの）
-    static let launchArguments: [String] = []
+    /// 起動引数（初めての起動。今日の一局は見本の局で始まる。保存されたデータを壊さないよう記録を消してから始める）
+    static let launchArguments: [String] = ["-uiTestFresh"]
 
     /// 1 操作ずつ。各操作のあとに撮る。
+    /// 3 ページの案内 → 今日の一局 → なすを選んで捨てる → 相手 3 人の番 → パンを選んで捨てる → 相手の番
+    /// → ご飯を引いてツモ → 円卓に献立 → 共有 → ホームへ（最初の和了りのあとだけ Pro の案内）→ 図鑑
     static let steps: [Step] = [
-        .tap("main.increment"),
-        .tap("main.increment"),
-        .tap("main.reset"),
+        .tap("main.next"),
+        .tap("main.next"),
+        .tap("main.start"),
+        .tap("main.daily"),
+        .tap("main.tile.eggplant"),
+        .tap("main.discard"),
+        .wait(2.0),
+        .tap("main.hint"),
+        .tap("main.tile.bread"),
+        .tap("main.discard"),
+        .wait(2.0),
+        .tap("main.tsumo"),
+        .wait(2.0),
+        .tap("main.share"),
+        .tap("main.closeShare"),
+        .tap("main.done"),
+        .wait(1.5),
+        .tap("main.closePaywall"),
+        .tap("main.zukan"),
+        .tap("main.closeZukan"),
     ]
 }
 

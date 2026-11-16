@@ -3,15 +3,23 @@
   "products": [
     {
       "type": "NON_CONSUMABLE",
-      "productId": "com.enludus.daily.template.pro",
-      "referenceName": "Pro",
+      "productId": "com.enludus.daily.011.pro",
+      "referenceName": "Menu Mahjong Pro",
       "price": 480,
       "familySharable": true,
-      "reviewNote": "Pro を買うと、すべての〇〇と詳しい振り返りが使えます。課金の画面は設定 > Pro から開けます。",
+      "reviewNote": "Pro を買うと、追加の役 32 品（お弁当・世界の料理）、冷蔵庫の一局、献立帳のすべてと 1 週間の献立表が使えます。課金の画面はホームの「冷蔵庫の一局」（お試しのあと）か、設定 > Pro でできること から開けます。",
       "reviewScreenshot": "docs/iap/paywall.png",
       "localizations": [
-        {"locale": "ja", "name": "Pro", "description": "すべての〇〇と詳しい振り返り"},
-        {"locale": "en-US", "name": "Pro", "description": "All 〇〇 and detailed reviews"}
+        {
+          "locale": "ja",
+          "name": "献立マージャン Pro",
+          "description": "追加の役 32 品・冷蔵庫の一局・献立帳のすべてと献立表"
+        },
+        {
+          "locale": "en-US",
+          "name": "Menu Mahjong Pro",
+          "description": "32 more dishes, Fridge mode, full menu book and weekly plan"
+        }
       ]
     }
   ]

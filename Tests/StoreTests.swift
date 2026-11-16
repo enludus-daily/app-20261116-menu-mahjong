@@ -1,13 +1,13 @@
 import Testing
-@testable import DailyApp
+@testable import MenuMahjong
 
 struct EntitlementsTests {
-    let bundle = "com.enludus.daily.template"
+    let bundle = "com.enludus.daily.011"
 
     @Test func productIDsFollowTheBundleID() {
-        #expect(ProductID.pro(bundleID: bundle) == "com.enludus.daily.template.pro")
-        #expect(ProductID.pack("phrases", bundleID: bundle) == "com.enludus.daily.template.pack.phrases")
-        #expect(ProductID.yearly(bundleID: bundle) == "com.enludus.daily.template.sub.yearly")
+        #expect(ProductID.pro(bundleID: bundle) == "com.enludus.daily.011.pro")
+        #expect(ProductID.pack("phrases", bundleID: bundle) == "com.enludus.daily.011.pack.phrases")
+        #expect(ProductID.yearly(bundleID: bundle) == "com.enludus.daily.011.sub.yearly")
     }
 
     @Test func nothingOwnedIsNotPro() {
