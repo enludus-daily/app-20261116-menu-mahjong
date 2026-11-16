@@ -19,7 +19,6 @@ struct RootView: View {
 
     var body: some View {
         @Bindable var model = model
-        let _ = NSLog("[MM] root body model=\(ObjectIdentifier(model).hashValue) round=\(model.round == nil ? "nil" : "set") onboarded=\(model.onboarded)")
         ZStack {
             // 切り替えに消えていく動きを付けない（消えていく案内が上に残ると、ホームのボタンが押せなくなる）
             if model.onboarded {
@@ -123,7 +122,6 @@ enum Launch {
     static let shared: AppModel = makeModel()
 
     static func makeModel() -> AppModel {
-        NSLog("[MM] makeModel")
         Lang.forcedJapanese = forcesJapanese
         if isFreshUITest {
             for key in ["progress", "onboarded", "sound", "haptics", "strong", "paywallOffered"] {

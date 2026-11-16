@@ -83,7 +83,6 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
             Button {
-                NSLog("[MM] daily button action")
                 if played { model.start(.free) } else { model.start(.daily) }
             } label: {
                 LacquerLabel(title: played

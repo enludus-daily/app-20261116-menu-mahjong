@@ -215,6 +215,7 @@ struct ChipButtonStyle: ButtonStyle {
             .frame(minWidth: 44, minHeight: 44)
             .background(Capsule().fill(Theme.nightRaised))
             .overlay(Capsule().strokeBorder(Theme.gold.opacity(0.45), lineWidth: 1))
+            .contentShape(Capsule())
             .scaleEffect(configuration.isPressed ? 0.94 : 1)
             .animation(.spring(response: 0.2, dampingFraction: 0.6), value: configuration.isPressed)
     }
@@ -306,15 +307,18 @@ struct OrderSlip<Content: View>: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .background(
-            ZStack(alignment: .top) {
-                Theme.slip
-                // 罫線
-                VStack(spacing: 23) {
-                    ForEach(0..<40, id: \.self) { _ in Rectangle().fill(Theme.slipRule.opacity(0.18)).frame(height: 0.7) }
+            // 罫線は Canvas で、伝票と同じ大きさにだけ描く。
+            // 2026-11-16：罫線を 40 本の Rectangle で並べたら背景が伝票より縦に大きくなり、上下にはみ出した（clipped は見た目だけで、
+            // 当たり判定は残る）。見えない背景が上の「今日の一局を打つ」などのボタンを覆い、押しても動かなかった
+            Canvas { ctx, size in
+                ctx.fill(Path(CGRect(origin: .zero, size: size)), with: .color(Theme.slip))
+                var y: CGFloat = 62
+                while y < size.height {
+                    ctx.fill(Path(CGRect(x: 0, y: y, width: size.width, height: 0.7)), with: .color(Theme.slipRule.opacity(0.18)))
+                    y += 23.7
                 }
-                .padding(.top, 62)
             }
-            .clipped()
+            .allowsHitTesting(false)
         )
         .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
         .shadow(color: .black.opacity(0.35), radius: 8, y: 4)

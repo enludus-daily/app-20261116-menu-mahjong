@@ -17,8 +17,6 @@ enum MainFlow {
         .tap("main.next"),
         .tap("main.next"),
         .tap("main.start"),
-        .tap("main.zukan"),
-        .tap("main.closeZukan"),
         .tap("main.daily"),
         .tap("main.tile.eggplant"),
         .tap("main.discard"),
