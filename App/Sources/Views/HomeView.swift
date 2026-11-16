@@ -218,22 +218,23 @@ struct HomeView: View {
             model.press()
             action()
         } label: {
-            HStack(spacing: 8) {
+            HStack(spacing: 6) {
                 Text(glyph)
                     .font(Theme.carved(17))
                     .foregroundStyle(Theme.lacquer)
-                    .frame(width: 28, height: 34)
+                    .frame(width: 26, height: 32)
                     .background(RoundedRectangle(cornerRadius: 5, style: .continuous).fill(Theme.ivory))
                     .shadow(color: Theme.jadeDeep, radius: 0, y: 2.5)
                 VStack(alignment: .leading, spacing: 0) {
                     Text(title).font(Theme.label(.footnote, weight: .heavy)).foregroundStyle(Theme.cream)
+                        .lineLimit(1).minimumScaleFactor(0.65)
                     if !sub.isEmpty {
                         Text(sub).font(Theme.number(11)).foregroundStyle(Theme.gold)
                     }
                 }
                 Spacer(minLength: 0)
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 8)
             .frame(maxWidth: .infinity, minHeight: 52)
             .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Theme.nightRaised))
             .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(Theme.gold.opacity(0.3), lineWidth: 1))

@@ -17,6 +17,9 @@ struct RootView: View {
 
     var body: some View {
         @Bindable var model = model
+        // 観測の対象にするため、body の中で読む（Binding の get の中だけで読むと、変わっても画面が更新されない）
+        let tableShown = model.round != nil
+        let rootSheet = tableShown ? nil : model.activeSheet
         ZStack {
             if model.onboarded {
                 HomeView()
@@ -31,7 +34,7 @@ struct RootView: View {
         .environment(model)
         // 夜の町中華の雀卓が世界。看板の灯りと卓布の緑が主役なので、画面はダークに固定する
         .preferredColorScheme(.dark)
-        .fullScreenCover(isPresented: Binding(get: { model.round != nil }, set: { if !$0 { model.round = nil } })) {
+        .fullScreenCover(isPresented: Binding(get: { tableShown }, set: { if !$0 { model.round = nil } })) {
             ZStack {
                 if model.showResult {
                     ResultView().transition(.move(edge: .bottom).combined(with: .opacity))
@@ -48,7 +51,7 @@ struct RootView: View {
                 SheetContent(sheet: sheet).environment(model).environment(\.locale, Lang.locale).preferredColorScheme(.dark)
             }
         }
-        .sheet(item: Binding(get: { model.round == nil ? model.activeSheet : nil }, set: { model.activeSheet = $0 })) { sheet in
+        .sheet(item: Binding(get: { rootSheet }, set: { model.activeSheet = $0 })) { sheet in
             SheetContent(sheet: sheet).environment(model).environment(\.locale, Lang.locale).preferredColorScheme(.dark)
         }
         // 手応えの表（README）：押す・捨てる・品がそろう・ロンの機会・和了り・和了られた
