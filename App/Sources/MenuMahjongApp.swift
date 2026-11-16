@@ -17,9 +17,6 @@ struct RootView: View {
 
     var body: some View {
         @Bindable var model = model
-        // 観測の対象にするため、body の中で読む（Binding の get の中だけで読むと、変わっても画面が更新されない）
-        let tableShown = model.round != nil
-        let rootSheet = tableShown ? nil : model.activeSheet
         ZStack {
             if model.onboarded {
                 HomeView()
@@ -29,29 +26,27 @@ struct RootView: View {
                 OnboardingView()
                     .transition(.opacity)
             }
+            // 卓と結果は、ホームの上に重ねる層（全画面の表示の仕組みは使わない）
+            if model.round != nil {
+                ZStack {
+                    if model.showResult {
+                        ResultView().transition(.move(edge: .bottom).combined(with: .opacity))
+                    } else {
+                        TableView().transition(.opacity)
+                    }
+                }
+                .animation(.spring(response: 0.45, dampingFraction: 0.85), value: model.showResult)
+                .accessibilityHidden(model.activeSheet != nil)
+                .transition(.move(edge: .bottom))
+                .zIndex(1)
+            }
         }
         .animation(.easeOut(duration: 0.35), value: model.onboarded)
+        .animation(.spring(response: 0.42, dampingFraction: 0.9), value: model.round == nil)
         .environment(model)
         // 夜の町中華の雀卓が世界。看板の灯りと卓布の緑が主役なので、画面はダークに固定する
         .preferredColorScheme(.dark)
-        .fullScreenCover(isPresented: Binding(get: { tableShown }, set: { if !$0 { model.round = nil } })) {
-            ZStack {
-                if model.showResult {
-                    ResultView().transition(.move(edge: .bottom).combined(with: .opacity))
-                } else {
-                    TableView().transition(.opacity)
-                }
-            }
-            .animation(.spring(response: 0.45, dampingFraction: 0.85), value: model.showResult)
-            .environment(model)
-            .environment(\.locale, Lang.locale)
-            .preferredColorScheme(.dark)
-            .accessibilityHidden(model.activeSheet != nil)
-            .sheet(item: $model.activeSheet) { sheet in
-                SheetContent(sheet: sheet).environment(model).environment(\.locale, Lang.locale).preferredColorScheme(.dark)
-            }
-        }
-        .sheet(item: Binding(get: { rootSheet }, set: { model.activeSheet = $0 })) { sheet in
+        .sheet(item: $model.activeSheet) { sheet in
             SheetContent(sheet: sheet).environment(model).environment(\.locale, Lang.locale).preferredColorScheme(.dark)
         }
         // 手応えの表（README）：押す・捨てる・品がそろう・ロンの機会・和了り・和了られた

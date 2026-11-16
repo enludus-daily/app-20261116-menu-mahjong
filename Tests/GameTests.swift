@@ -243,3 +243,35 @@ struct ProgressTests {
         #expect(cal.component(.weekday, from: week[0].day) == 2)
     }
 }
+
+@MainActor
+struct AppModelTests {
+    @Test func startingTodaysHandOpensATable() {
+        let model = AppModel(persists: false)
+        model.useSample = true
+        model.start(.daily)
+        #expect(model.round != nil)
+        #expect(model.mode == .daily)
+        #expect(model.round?.phase == .yourTurn)
+    }
+
+    @Test func tappingTheSameTileTwiceDiscardsIt() {
+        let model = AppModel(persists: false)
+        model.still = true
+        model.useSample = true
+        model.start(.daily)
+        let eggplant = Kitchen.ingredients.first { $0.id == "eggplant" }!.index
+        model.tap(eggplant)
+        #expect(model.selected == eggplant)
+        model.tap(eggplant)
+        #expect(model.round?.rivers[0] == [eggplant])
+        #expect(model.selected == nil)
+    }
+
+    @Test func fridgeModeWithoutIngredientsOpensTheFridge() {
+        let model = AppModel(persists: false)
+        model.start(.fridge)
+        #expect(model.round == nil)
+        #expect(model.activeSheet == .fridge)
+    }
+}
