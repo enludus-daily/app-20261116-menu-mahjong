@@ -7,6 +7,7 @@ struct TableView: View {
     @Environment(\.horizontalSizeClass) private var hSize
 
     var body: some View {
+        let _ = print("[MM] table body round=\(model.round == nil ? "nil" : "set")")
         if let round = model.round {
             Group {
                 if hSize == .regular {

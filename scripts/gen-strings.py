@@ -23,7 +23,9 @@ def main(argv):
     for path in sorted((root / 'App/Sources').rglob('*.swift')):
         text = path.read_text(encoding='utf-8')
         for m in CALL.finditer(text):
-            ja, en = m.group(1), m.group(2)
+            # Swift の文字列のエスケープ（\" と \\）を、実行時の文字に戻す
+            ja = m.group(1).replace('\\"', '"').replace('\\\\', '\\')
+            en = m.group(2).replace('\\"', '"').replace('\\\\', '\\')
             where = f'{path.relative_to(root)}:{text.count(chr(10), 0, m.start()) + 1}'
             if '\\(' in ja or '\\(' in en:
                 errors.append(f'{where} 文字列の差し込み \\( は使わず trf と %d / %@ にする')

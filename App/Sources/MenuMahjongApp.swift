@@ -17,6 +17,7 @@ struct RootView: View {
 
     var body: some View {
         @Bindable var model = model
+        let _ = print("[MM] root body round=\(model.round == nil ? "nil" : "set") onboarded=\(model.onboarded)")
         ZStack {
             if model.onboarded {
                 HomeView()
