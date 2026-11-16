@@ -694,24 +694,24 @@
         }
       }
     },
-    "今日は和了り %d 点。また明日": {
+    "今日は和了り %d 点。自由に一局へ": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Won %d pts today. See you tomorrow"
+            "value": "Won %d pts today. Play a free hand"
           }
         }
       }
     },
-    "今日は打ちました。また明日": {
+    "今日は打ちました。自由に一局へ": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Played today. See you tomorrow"
+            "value": "Played today. Play a free hand"
           }
         }
       }

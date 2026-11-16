@@ -172,6 +172,39 @@ struct LacquerButtonStyle: ButtonStyle {
     }
 }
 
+/// 漆塗りの札の見た目（押した感じはボタン側で付けない。ホームの主なボタン用）
+struct LacquerLook: ViewModifier {
+    var fill: Color = Theme.lacquer
+    var text: Color = Theme.goldSoft
+    var height: CGFloat = 52
+
+    func body(content: Content) -> some View {
+        content
+            .font(Theme.label(.headline, weight: .heavy))
+            .foregroundStyle(text)
+            .frame(maxWidth: .infinity, minHeight: height)
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(fill)
+                    .shadow(color: .black.opacity(0.45), radius: 0, y: 4)
+            )
+            .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(Theme.gold.opacity(0.8), lineWidth: 1.5))
+            .contentShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+    }
+}
+
+/// 漆塗りの札の文字
+struct LacquerLabel: View {
+    let title: String
+    var body: some View {
+        Text(title)
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
+            .padding(.horizontal, 10)
+            .modifier(LacquerLook())
+    }
+}
+
 /// 小さな丸い札（設定・閉じるなど）
 struct ChipButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {

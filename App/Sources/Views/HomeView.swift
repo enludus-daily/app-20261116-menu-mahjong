@@ -83,17 +83,14 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
             Button {
-                NSLog("[MM] daily button action model=\(ObjectIdentifier(model).hashValue)")
-                model.start(.daily)
+                NSLog("[MM] daily button action")
+                if played { model.start(.free) } else { model.start(.daily) }
             } label: {
-                if played {
-                    Text(points > 0 ? trf("今日は和了り %d 点。また明日", "Won %d pts today. See you tomorrow", points) : tr("今日は打ちました。また明日", "Played today. See you tomorrow"))
-                } else {
-                    Text(tr("今日の一局を打つ", "Play today's hand"))
-                }
+                LacquerLabel(title: played
+                             ? (points > 0 ? trf("今日は和了り %d 点。自由に一局へ", "Won %d pts today. Play a free hand", points) : tr("今日は打ちました。自由に一局へ", "Played today. Play a free hand"))
+                             : tr("今日の一局を打つ", "Play today's hand"))
             }
-            .buttonStyle(LacquerButtonStyle())
-            .disabled(played)
+            .buttonStyle(.plain)
             .accessibilityIdentifier("main.daily")
         }
         .padding(14)
@@ -118,8 +115,9 @@ struct HomeView: View {
                         .font(Theme.label(.caption2, weight: .semibold))
                         .opacity(0.8)
                 }
+                .modifier(LacquerLook(fill: Theme.feltLight, text: .white, height: 58))
             }
-            .buttonStyle(LacquerButtonStyle(fill: Theme.feltLight, text: .white, height: 58))
+            .buttonStyle(.plain)
             .accessibilityIdentifier("main.free")
             Button {
                 model.start(.fridge)
@@ -128,7 +126,7 @@ struct HomeView: View {
                     HStack(spacing: 4) {
                         Text(tr("冷蔵庫の一局", "Fridge mode"))
                         if !model.isPro {
-                            Text("PRO")
+                            Text(verbatim: "PRO")
                                 .font(.system(size: 9, weight: .black, design: .rounded))
                                 .padding(.horizontal, 4).padding(.vertical, 1)
                                 .background(Capsule().fill(Theme.gold))
@@ -141,8 +139,9 @@ struct HomeView: View {
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
                 }
+                .modifier(LacquerLook(fill: Theme.goldDeep, text: .white, height: 58))
             }
-            .buttonStyle(LacquerButtonStyle(fill: Theme.goldDeep, text: .white, height: 58))
+            .buttonStyle(.plain)
             .accessibilityIdentifier("main.fridge")
         }
     }
