@@ -32,6 +32,7 @@ struct TableView: View {
             if hSize != .regular {
                 Forming(round: round)
             }
+            YourRiver(round: round)
             Spacer(minLength: 0)
         }
         .padding(.horizontal, 12)
@@ -254,6 +255,36 @@ private struct CenterFelt: View {
     }
 }
 
+// MARK: - 自分の捨て牌
+
+private struct YourRiver: View {
+    let round: Round
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(tr("あなたの捨て牌", "Your discards"))
+                .font(Theme.label(.caption, weight: .heavy))
+                .foregroundStyle(Theme.goldSoft)
+            if round.rivers[0].isEmpty {
+                Text(tr("料理になりそうにない牌から捨てていこう。迷ったら「ヒント」。", "Start by discarding tiles that don't cook with anything. Stuck? Tap Hint."))
+                    .font(Theme.label(.caption2, weight: .semibold))
+                    .foregroundStyle(Theme.cream.opacity(0.7))
+            } else {
+                LazyVGrid(columns: Array(repeating: GridItem(.fixed(22), spacing: 3), count: 12), alignment: .leading, spacing: 4) {
+                    ForEach(Array(round.rivers[0].enumerated()), id: \.offset) { _, k in
+                        TileView(kind: k, width: 22)
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(Theme.felt.opacity(0.35)))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(trf("あなたの捨て牌 %d 枚", "Your discards: %d", round.rivers[0].count))
+    }
+}
+
 // MARK: - 作りかけの献立
 
 struct Forming: View {
@@ -363,7 +394,7 @@ private struct HandArea: View {
                         }
                         .buttonStyle(.plain)
                         .padding(.leading, isDrawn ? extra : 0)
-                        .accessibilityIdentifier("main.tile." + Kitchen.ingredients[k].id)
+                        .accessibilityIdentifier("tile." + Kitchen.ingredients[k].id)
                         .accessibilityLabel(Kitchen.ingredients[k].name)
                         .accessibilityAddTraits(model.selected == k ? .isSelected : [])
                     }

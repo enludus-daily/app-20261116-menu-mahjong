@@ -210,6 +210,28 @@
         }
       }
     },
+    "あなたの捨て牌": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your discards"
+          }
+        }
+      }
+    },
+    "あなたの捨て牌 %d 枚": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your discards: %d"
+          }
+        }
+      }
+    },
     "あなたの番：1 枚捨てる": {
       "extractionState": "manual",
       "localizations": {
@@ -1031,6 +1053,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Discard"
+          }
+        }
+      }
+    },
+    "料理になりそうにない牌から捨てていこう。迷ったら「ヒント」。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start by discarding tiles that don't cook with anything. Stuck? Tap Hint."
           }
         }
       }

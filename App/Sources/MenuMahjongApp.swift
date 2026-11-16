@@ -113,9 +113,13 @@ enum Launch {
     static var isDemo: Bool { ProcessInfo.processInfo.arguments.contains("-demo") }
     static var isFreshUITest: Bool { ProcessInfo.processInfo.arguments.contains("-uiTestFresh") }
 
-    /// 撮影の時刻：今日の夕方 18:30（献立を決める時間）
+    /// 撮影の時刻：今週の木曜の夕方 18:30（献立を決める時間。見本の献立が今週の献立表に並ぶように）
     static func stageDate() -> Date {
-        Calendar.current.date(bySettingHour: 18, minute: 30, second: 0, of: Date()) ?? Date()
+        var cal = Calendar.current
+        cal.firstWeekday = 2
+        let start = cal.dateInterval(of: .weekOfYear, for: Date())?.start ?? Date()
+        let thursday = cal.date(byAdding: .day, value: 3, to: start) ?? Date()
+        return cal.date(bySettingHour: 18, minute: 30, second: 0, of: thursday) ?? Date()
     }
 
     /// アプリでただ 1 つのモデル（最初に読まれたときに 1 回だけ作る）
