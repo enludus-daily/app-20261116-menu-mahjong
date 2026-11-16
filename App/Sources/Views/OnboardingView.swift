@@ -41,7 +41,7 @@ struct OnboardingView: View {
                 } else {
                     Button(tr("卓につく", "Take a seat")) {
                         model.press()
-                        withAnimation(.easeOut(duration: 0.35)) { model.onboarded = true }
+                        model.onboarded = true
                     }
                     .accessibilityIdentifier("main.start")
                 }

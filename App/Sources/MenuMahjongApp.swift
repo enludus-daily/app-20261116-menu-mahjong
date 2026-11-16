@@ -19,15 +19,14 @@ struct RootView: View {
 
     var body: some View {
         @Bindable var model = model
-        let _ = print("[MM] root body model=\(ObjectIdentifier(model).hashValue) round=\(model.round == nil ? "nil" : "set") onboarded=\(model.onboarded)")
+        let _ = NSLog("[MM] root body model=\(ObjectIdentifier(model).hashValue) round=\(model.round == nil ? "nil" : "set") onboarded=\(model.onboarded)")
         ZStack {
+            // 切り替えに消えていく動きを付けない（消えていく案内が上に残ると、ホームのボタンが押せなくなる）
             if model.onboarded {
                 HomeView()
                     .accessibilityHidden(model.round != nil || model.activeSheet != nil)
-                    .transition(.opacity)
             } else {
                 OnboardingView()
-                    .transition(.opacity)
             }
             // 卓と結果は、ホームの上に重ねる層（全画面の表示の仕組みは使わない）
             if model.round != nil {
@@ -40,12 +39,9 @@ struct RootView: View {
                 }
                 .animation(.spring(response: 0.45, dampingFraction: 0.85), value: model.showResult)
                 .accessibilityHidden(model.activeSheet != nil)
-                .transition(.move(edge: .bottom))
                 .zIndex(1)
             }
         }
-        .animation(.easeOut(duration: 0.35), value: model.onboarded)
-        .animation(.spring(response: 0.42, dampingFraction: 0.9), value: model.round == nil)
         .environment(model)
         // 夜の町中華の雀卓が世界。看板の灯りと卓布の緑が主役なので、画面はダークに固定する
         .preferredColorScheme(.dark)
@@ -127,7 +123,7 @@ enum Launch {
     static let shared: AppModel = makeModel()
 
     static func makeModel() -> AppModel {
-        print("[MM] makeModel")
+        NSLog("[MM] makeModel")
         Lang.forcedJapanese = forcesJapanese
         if isFreshUITest {
             for key in ["progress", "onboarded", "sound", "haptics", "strong", "paywallOffered"] {

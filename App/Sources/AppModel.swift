@@ -47,7 +47,7 @@ final class AppModel {
 
     // 画面の状態
     var round: Round? {
-        didSet { print("[MM] round \(oldValue == nil ? "nil" : "set") -> \(round == nil ? "nil" : "set")") }
+        didSet { NSLog("[MM] round \(oldValue == nil ? "nil" : "set") -> \(round == nil ? "nil" : "set")") }
     }
     var mode: GameMode = .free
     var selected: Int?
@@ -122,7 +122,7 @@ final class AppModel {
     // MARK: - 一局
 
     func start(_ mode: GameMode) {
-        print("[MM] start \(mode.rawValue) sample=\(useSample)")
+        NSLog("[MM] start \(mode.rawValue) sample=\(useSample)")
         press()
         if mode == .fridge && !canPlayFridge {
             activeSheet = .paywall
@@ -257,7 +257,7 @@ final class AppModel {
 
     /// 結果を閉じてホームへ。最初の和了りのあとだけ Pro の案内を出す
     func closeRound() {
-        print("[MM] closeRound")
+        NSLog("[MM] closeRound")
         press()
         let won = lastRecord != nil
         showResult = false

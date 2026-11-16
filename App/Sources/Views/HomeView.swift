@@ -83,7 +83,7 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
             Button {
-                print("[MM] daily button action model=\(ObjectIdentifier(model).hashValue)")
+                NSLog("[MM] daily button action model=\(ObjectIdentifier(model).hashValue)")
                 model.start(.daily)
             } label: {
                 if played {

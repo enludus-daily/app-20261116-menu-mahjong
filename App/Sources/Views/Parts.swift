@@ -159,6 +159,7 @@ struct LacquerButtonStyle: ButtonStyle {
             .font(Theme.label(.headline, weight: .heavy))
             .foregroundStyle(text)
             .frame(maxWidth: .infinity, minHeight: height)
+            .contentShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(fill)
