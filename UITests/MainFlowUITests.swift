@@ -14,6 +14,8 @@ enum MainFlow {
     /// 3 ページの案内 → 今日の一局 → なすを選んで捨てる → 相手 3 人の番 → パンを選んで捨てる → 相手の番
     /// → ご飯を引いてツモ → 円卓に献立 → 共有 → ホームへ（最初の和了りのあとだけ Pro の案内）→ 図鑑
     static let steps: [Step] = [
+        // 起動直後は遅いランナーで描画が追いつかないことがある
+        .wait(1.5),
         .tap("main.next"),
         .tap("main.next"),
         .tap("main.start"),
@@ -29,6 +31,8 @@ enum MainFlow {
         .wait(2.0),
         .tap("main.share"),
         .tap("main.closeShare"),
+        // 共有のシートが閉じきるのを待つ
+        .wait(1.5),
         .tap("main.done"),
         .wait(1.5),
         .tap("main.closePaywall"),
