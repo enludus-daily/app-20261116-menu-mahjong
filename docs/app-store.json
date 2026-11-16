@@ -1,21 +1,21 @@
 {
   "_doc": "App Store Connect に API で入れる情報（.github/workflows/asc.yml の metadata が読む）。文字数：name・subtitle 30、keywords 100（カンマ区切り）、promotionalText 170、description 4000。カテゴリの ID は EDUCATION・PRODUCTIVITY・UTILITIES・LIFESTYLE・HEALTH_AND_FITNESS など。審査への提出と App プライバシーの申告は本人が行う。",
   "locale": "ja",
-  "name": "",
-  "subtitle": "",
-  "primaryCategory": "",
-  "secondaryCategory": "",
+  "name": "献立マージャン",
+  "subtitle": "食材の牌でそろえて、今夜の献立に",
+  "primaryCategory": "GAMES",
+  "secondaryCategory": "FOOD_AND_DRINK",
   "supportUrl": "https://github.com/enludus-daily/app-20261116-menu-mahjong/issues",
   "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261116-menu-mahjong/blob/main/PRIVACY.md",
-  "keywords": "",
-  "promotionalText": "",
-  "description": "",
-  "whatToTest": "",
+  "keywords": "麻雀,マージャン,献立,料理,レシピ,夕飯,買い物リスト,パズル,一人麻雀,今日の一局,図鑑,メニュー",
+  "promotionalText": "牌は食材、役は料理。4品と主食をそろえて和了ると、今夜の献立と買い物メモが残ります。今日の一局は毎日同じ配牌。",
+  "description": "「今夜なに作ろう」を、麻雀で決める。\n\n献立マージャンは、牌の代わりに食材の牌を引いて捨てる一人用の麻雀です。3 枚の組み合わせがそのまま 1 品の料理（豚・生姜・しょうゆで「豚の生姜焼き」）、同じ 2 枚が主食。4 品と主食をそろえて和了ると、町中華の円卓に料理が湯気とともに並び、作り方つきの今夜の献立と買い物メモが残ります。\n\n■ 遊び方はやさしく\n・1 枚引いて 1 枚捨てる。鳴き・符計算・ドラはありません\n・作りかけの献立と「あと 1 枚の料理」がいつも見える\n・ヒントで、おすすめの捨て牌がわかる\n・相手は決まった打ち方の料理人 3 人（点心の陳さん・洋食の森さん・割烹の梅さん）\n\n■ 料理の役は 74 品（和・中・洋）\n肉じゃが、麻婆豆腐、回鍋肉、オムライス、ミネストローネ…。和定食・中華フルコース・海の幸・野菜たっぷり・満漢全席（役満）など、献立全体の役もあります。\n\n■ 毎日開く理由\n・今日の一局：だれが打っても同じ配牌。連続日数がちょうちんに灯る\n・料理の図鑑：作った料理が集まる\n・献立帳：和了った献立が残る\n\n■ Pro（買い切り）\n・追加の役 32 品（お弁当・世界の料理）\n・冷蔵庫の一局：家にある食材が多く出て、買い物メモから外れる\n・献立帳をすべて残し、1 週間の献立表にする\n\n記録はすべて端末の中だけ。ログイン・広告・解析はありません。",
+  "whatToTest": "ホーム →「今日の一局を打つ」で一局。牌を押して選び、もう一度押すか「捨てる」で捨てる。そろったら「ツモ！」か相手の捨て牌で「ロン！」。和了ると円卓に献立と買い物メモが出ます。図鑑・献立帳・冷蔵庫の一局（1 回お試し）・設定の Pro と購入の復元も確かめてください。",
   "en-US": {
-    "name": "",
-    "subtitle": "",
-    "keywords": "",
-    "promotionalText": "",
-    "description": ""
+    "name": "Menu Mahjong",
+    "subtitle": "Win a hand, cook dinner",
+    "keywords": "mahjong,solitaire,dinner,meal plan,recipe,cooking,grocery list,puzzle,tile game,daily,food,menu",
+    "promotionalText": "Tiles are ingredients, winning sets are dishes. Complete four dishes and a staple, and you get tonight's dinner menu plus a shopping list.",
+    "description": "Can't decide what to cook tonight? Let a hand of mahjong decide.\n\nMenu Mahjong is a single-player mahjong game where every tile is an ingredient. Three tiles that cook together make a dish (pork + ginger + soy = Ginger Pork) and a pair is your staple. Collect four dishes and a staple to win — the dishes arrive steaming on a Chinese-restaurant lazy Susan, and you keep tonight's menu with short cooking notes and a shopping list.\n\nEASY RULES\n• Draw one, discard one. No calls, no fu counting, no dora\n• Always see your menu in progress and the dishes you're one tile away from\n• Tap Hint for a suggested discard\n• Three rival chefs with simple, fixed play styles\n\n74 DISHES ACROSS JAPANESE, CHINESE AND WESTERN COOKING\nNikujaga, mapo tofu, twice-cooked pork, omurice, minestrone and more — plus menu-wide hands like Japanese Set Meal, Bounty of the Sea, Garden Feast and the Imperial Banquet yakuman.\n\nA REASON TO COME BACK\n• Today's Hand: the same deal for everyone, with a lantern counting your streak\n• Dish Collection: every dish you cook gets logged\n• Menu Book: your winning menus are saved\n\nPRO (ONE-TIME PURCHASE)\n• 32 more dishes: bento favorites and world cuisine\n• Fridge mode: ingredients you have show up more and drop off your shopping list\n• Keep every menu and see a weekly dinner plan\n\nEverything stays on your device. No login, ads or analytics."
   }
 }
